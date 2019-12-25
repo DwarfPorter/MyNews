@@ -132,7 +132,9 @@ public class ChannelParser implements ChannelConstants {
                 description,
                 link,
                 pubDate,
+                author,
                 image,
+                categoryOrigin,
                 category);
     }
 
