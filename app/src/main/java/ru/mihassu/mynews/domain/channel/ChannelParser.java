@@ -16,32 +16,7 @@ import java.util.Locale;
 import ru.mihassu.mynews.domain.entity.ArticleCategory;
 import ru.mihassu.mynews.domain.model.MyArticle;
 
-import static ru.mihassu.mynews.Utils.logIt;
-
-public class ChannelParser {
-
-    private static final String TAG_RSS = "rss";
-    private static final String TAG_CHANNEL = "channel";
-    private static final String TAG_ITEM = "item";
-
-    private static final String TAG_TITLE = "title";
-    private static final String TAG_DESCRIPTION = "description";
-    private static final String TAG_LINK = "link";
-    private static final String TAG_DATE = "pubDate";
-    private static final String TAG_AUTHOR = "author";
-    private static final String TAG_ENCLOSURE = "enclosure";
-    private static final String TAG_CATEGORY = "category";
-
-    private static final int TAG_ID_TITLE = 1;
-    private static final int TAG_ID_DESCRIPTION = 2;
-    private static final int TAG_ID_LINK = 3;
-    private static final int TAG_ID_DATE = 4;
-    private static final int TAG_ID_AUTHOR = 5;
-    private static final int TAG_ID_ENCLOSURE = 6;
-    private static final int TAG_ID_CATEGORY = 7;
-
-    private static final String ATTR_TYPE = "type";
-    private static final String ATTR_URL = "url";
+public class ChannelParser implements ChannelConstants {
 
     private Classifier classifier;
 
@@ -157,9 +132,7 @@ public class ChannelParser {
                 description,
                 link,
                 pubDate,
-                author,
                 image,
-                categoryOrigin,
                 category);
     }
 

@@ -32,7 +32,7 @@ public class ArticleData {
 
     public MyArticle convertToModel() {
         return new MyArticle(
-                title, description, link, pubDate, author, image, categoryOrigin, ArticleCategory.NEWS
+                title, description, link, pubDate, image, ArticleCategory.NEWS
         );
     }
 }
